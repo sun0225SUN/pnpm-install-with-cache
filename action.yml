@@ -1,8 +1,8 @@
-name: "pnpm install with cache"
+name: "pnpm install packages with cache"
 description: "Speed up pnpm installation by caching pnpm store."
 branding:
   icon: "package"
-  color: "orange"
+  color: "green"
 runs:
   using: "composite"
   steps:
