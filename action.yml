@@ -3,13 +3,20 @@ description: "Speed up pnpm installation by caching pnpm store."
 branding:
   icon: "package"
   color: "green"
+
+inputs:
+  pnpm-version:
+    description: "The version of pnpm to install."
+    required: false
+    default: "latest"
+
 runs:
   using: "composite"
   steps:
     - name: Install pnpm
       uses: pnpm/action-setup@v4
       with:
-        version: 9
+        version: ${{ inputs.pnpm-version }}
         run_install: false
 
     - name: Get pnpm store directory
