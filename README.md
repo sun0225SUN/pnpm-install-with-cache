@@ -17,13 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install node
+      - name: Setup node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install pnpm
-        uses: yuanze-dev/pnpm-install-with-cache@v1
+      - name: Pnpm Install
+        uses: yuanze-dev/pnpm-install-with-cache@v2
+        with:
+          pnpm-version: 9
 
       - name: Build project
         run: pnpm build
