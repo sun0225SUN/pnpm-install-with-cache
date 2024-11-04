@@ -23,7 +23,7 @@ jobs:
           node-version: 20
 
       - name: Pnpm Install
-        uses: yuanze-dev/pnpm-install-with-cache@v2
+        uses: sun0225SUN/pnpm-install-with-cache@main
         with:
           pnpm-version: 9
 
